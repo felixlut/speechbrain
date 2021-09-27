@@ -29,7 +29,6 @@ import sys
 import torch
 import speechbrain as sb
 from hyperpyyaml import load_hyperpyyaml
-from mini_librispeech_prepare import prepare_mini_librispeech
 
 
 # Brain class for speech enhancement training
