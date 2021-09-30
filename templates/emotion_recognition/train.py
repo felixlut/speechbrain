@@ -118,6 +118,7 @@ class emoBrain(sb.Brain):
             lens = torch.cat([lens, lens])
 
         # Compute the cost function
+        # TODO: Change loss function
         loss = sb.nnet.losses.nll_loss(predictions, emo, lens)
 
         # Append this batch of losses to the loss metric for easy
@@ -126,6 +127,7 @@ class emoBrain(sb.Brain):
         )
 
         # Compute classification error at test time
+        # TODO: Change accuracy metric
         if stage != sb.Stage.TRAIN:
             self.error_metrics.append(batch.id, predictions, emo, lens)
 
